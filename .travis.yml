@@ -8,6 +8,12 @@ jdk:
 install:
     - gradle assemble
 
+addons:
+  sonarcloud:
+    organization: "d0543027"
+    token:
+      secure: "aS7CkQSuhSfaR4PvWa1ljdC3gV+IHYYypRnLWWrYKueNjfGri4zdECcHax8214ROsJrC45Rwld2hMb3+QqezyxUAepPpcdolzCzg7dYI6cTGo5NxuPYhW2xC3+2g6n/NpYD34xs5n8g/sTCZRBUXaNBcbE8FErbBMJK6U/KJLwYdgZJo4JSPsDAK8bzP6Jz5tgeIFZceBYoOUk3baUEyC/J6ze5RRewOC7WsfGY4WFOHM++rG3swfZ0i6yGU90LO91to3QQDa25biNdvldDeaAl3q7zyq4VaC09oa5ZSzEuYa9jw3wQza2MdQAwP796t6MMiNsj38Dsw1BccH78BAMV9oxyEdZDlTGhGGKwIEt9htZWHEZ/MteuEQbQ/Jp1VO7HBHO555xePT4MKHjB/Hsg/lqbVrfIDPN+n7CZe18Xe5oRFeUy6qPAmLMb0ps4YSXpsf7q7uR3jTsQCwFHjpH9OxuxfvV33tHkJ0Ga5WRro4OecbIHG6/lV1gNDXNywI0heU7KpY3yPFfGLKSCvBJclo2zKIsKmZEJH6cA64Bs0PiCxbKtir6xfkEk2q/7hgSAgtnogMgttRDXGp9HXtlRJNnDC5jG52WTsR4uq1goPoXDgVOjrLLG/CGXWrLWza+Wsffh24b30ywK3jdX7/KgPfGMIod4F5y137g2VTv0=" # encrypted value of your token
+
 script:
     - gradle test
-    - gradle sonarqube -Dsonar.host.url=$SONAR_HOST_URL -Dsonar.login=$SONAR_TOKEN
+    - gradle sonarqube
