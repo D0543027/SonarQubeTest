@@ -16,7 +16,7 @@ jacoco {
 jacocoTestReport {
      // Forcing the execution of 'test' before the execution of 'jacocoTestReport'
      dependsOn test
-     report{
+     reports{
          xml.enabled true
      }
  }
