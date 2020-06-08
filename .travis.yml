@@ -4,9 +4,8 @@ dist: xenial
 
 jdk:
     - openjdk11
-
-install:
-    - gradle assemble
+    
+install: true
 
 addons:
   sonarcloud:
