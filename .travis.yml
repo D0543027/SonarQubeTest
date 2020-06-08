@@ -12,8 +12,8 @@ addons:
   sonarcloud:
     organization: "d0543027"
     token:
-      secure: $SONAR_TOKEN
+      secure: "p/7t3e+SuZ+OXV32oFswqX8sSt5rlsYdo1DbFQO6i0/iCM2YAYAc47Y3J+72MZhTSSzGQOUkGusXueET9ISgixifFysSN9rGJTzee0kfHy/UQW2Skz0vfNb+7QbOHCarL3amfnUxp401q9jD5YYft+xWHANdQbJJaFSO+HA9VYFU18L/LLLeGhkQgBulJKtj4e3vkt1x1a+fU6ODlslGq9nURZiJdu5RJO3Ai5mEbLBsNlPOFXy0L5J9DCj8FAOEdhg4ifujVOqMylD2HrLuWAxmTwMo7pfYBb2CFltbn4KU5Jr22wmPtExhsaJiNrL75idEf/F72tZ3VMZgjefpchTvkrC06iXPW52m+AQUjahSOyoYfn5ZkdrHXXXXa/35xcMpTGjsbdcDbTeatIXQhn65yZYW/q9ApUOv2fKkcfHG8dp2KWsKFn+XdIyvSvwLdG7WSS9osnbm/A1caWIyy6XSTWPZn9aj/vi8dzCKhBu6TDo/aSykkGtFTczcGsbPrasw33Yl9Mm4alP0p/BYDjI4RIzgRYPYvR2ZulRLH8JOReeTpr4HDDJkvcX07exp5yXm6UOOBm7DzzFNyU2PAofhgAK+o0DEqEHs8Pbtp+v2cLpzEPvrL3bcjZJe1DWZROiddrgx82YJr6gsLM1+khPyFA3YdcMeuCYrH5fdnz0="
 
 script:
     - gradle jacocoTestReport
-    - gradle sonarqube -Dsonar.login=$SONAR_LOGIN -Dsonar.password=$SONAR_PASSWORD -Dsonar.projectKey=$SONAR_PROJECT_KEY
+    - gradle sonarqube -Dsonar.projectKey=$SONAR_PROJECT_KEY
