@@ -16,4 +16,4 @@ addons:
 
 script:
     - gradle jacocoTestReport
-    - gradle sonarqube -Dsonar.login=$SONAR_TOKEN -Dsonar.projectKey=$SONAR_PROJECT_KEY
+    - gradle sonarqube -Dsonar.login=$SONAR_LOGIN -Dsonar.password=$SONAR_PASSWORD -Dsonar.projectKey=$SONAR_PROJECT_KEY
