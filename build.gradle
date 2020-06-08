@@ -8,9 +8,17 @@ plugins{
 javadoc.options.encoding = 'UTF-8'
 compileJava.options.encoding = 'UTF-8'
 
+jacoco {
+    toolVersion = "0.8.5"
+    reportsDir = file("$buildDir/customJacocoReportDir")
+}
+
 jacocoTestReport {
      // Forcing the execution of 'test' before the execution of 'jacocoTestReport'
      dependsOn test
+     report{
+         xml.enabled true
+     }
  }
 
 repositories{
