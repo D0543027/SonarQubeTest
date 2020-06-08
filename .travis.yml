@@ -16,4 +16,5 @@ addons:
 
 script:
     - gradle test
+    - gradle jacocoTestReport
     - gradle sonarqube
