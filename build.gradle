@@ -1,7 +1,8 @@
 plugins{
     id "java"
     id "jacoco"
-    id "org.sonarqube" version "2.8"
+    id "application"
+    id "org.sonarqube" version "2.7"
 }
 
 sonarqube {
@@ -12,6 +13,11 @@ sonarqube {
 
 javadoc.options.encoding = 'UTF-8'
 compileJava.options.encoding = 'UTF-8'
+
+jacocoTestReport {
+     // Forcing the execution of 'test' before the execution of 'jacocoTestReport'
+     dependsOn test
+ }
 
 repositories{
     mavenCentral()
